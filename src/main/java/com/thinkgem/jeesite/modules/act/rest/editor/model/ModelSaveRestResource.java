@@ -54,7 +54,7 @@ public class ModelSaveRestResource implements ModelDataJsonConstants {
 	protected ObjectMapper objectMapper = new ObjectMapper();
 
 	@RequiresPermissions("act:model:edit")
-	@RequestMapping(value = "/act/service/model/{modelId}/save", method = RequestMethod.PUT)
+	@RequestMapping(value = "/act/service/model/{modelId}/save", method = RequestMethod.POST)
 	@ResponseStatus(value = HttpStatus.OK)
 	public void saveModel(@PathVariable String modelId, @RequestBody MultiValueMap<String, String> values) {
 		try {
